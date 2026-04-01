@@ -1,0 +1,189 @@
+:root {
+    --nss-green: #137547;
+    --nss-gold: #FFD700;
+    --nss-black: #101112;
+    --nss-grey: #292929;
+    --nss-white: #f8f8f8;
+    --nss-offwhite: #e6e8eb;
+    --true-black: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--true-black);
+    color: var(--nss-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--nss-black);
+    border-bottom: 4px solid var(--nss-green);
+    color: var(--nss-white);
+    text-align: center;
+    padding: 2rem 0 1.2rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--nss-gold);
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: var(--nss-green);
+    font-style: italic;
+    opacity: 0.85;
+    margin-top: 0.5rem;
+}
+
+.accent-img {
+    display: block;
+    margin: 32px auto 0 auto;
+    /*  Thick border trick — two-tone */
+    border-top: 10px solid var(--nss-green);
+    border-left: 10px solid var(--nss-green);
+    border-bottom: 10px solid var(--nss-gold);
+    border-right: 10px solid var(--nss-gold);
+    border-radius: 0px;
+    background: #191a1e;
+    /* To blend with main-content */
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.main-content {
+    background: var(--nss-grey);
+    border-radius: 14px;
+    box-shadow: 0 2px 32px rgba(0, 0, 0, 0.13);
+    margin: 32px auto;
+    padding: 32px;
+    max-width: 1100px;
+    width: 90%;
+}
+
+.intro {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: var(--nss-gold);
+    margin-bottom: 0.7rem;
+    font-weight: 700;
+}
+
+.intro p {
+    font-size: 1.13rem;
+    line-height: 1.7;
+    color: var(--nss-offwhite);
+    margin-bottom: 1.2rem;
+}
+
+.projects h2 {
+    color: var(--nss-gold);
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Project Cards */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.card {
+    background: #191a1e;
+    border-radius: 10px;
+    border: 2.5px solid var(--nss-green);
+    padding: 1.5rem;
+    width: 320px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 20px rgba(19, 117, 71, 0.12);
+    transition: transform 0.18s, box-shadow 0.22s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 32px rgba(255, 215, 0, 0.11);
+    border-color: var(--nss-gold);
+}
+
+.card h3 {
+    color: var(--nss-green);
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--nss-offwhite);
+    flex: 1;
+}
+
+.card a {
+    margin-top: 1rem;
+    color: var(--nss-gold);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+}
+
+.card a:hover {
+    color: var(--nss-green);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: var(--nss-black);
+    color: var(--nss-gold);
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    border-top: 3px solid var(--nss-green);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
