@@ -8,39 +8,40 @@
     --true-black: #000000;
 }
 
-* {
-    box-sizing: border-box;
+/* Page and layout resets */
+html,
+body {
     margin: 0;
     padding: 0;
+    background: var(--true-black);
+    color: var(--nss-white);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--true-black);
-    color: var(--nss-white);
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
+/* Content container settings */
 .container {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-/* Header */
+/* Header styles */
 header {
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 100;
     background: var(--nss-black);
-    border-bottom: 4px solid var(--nss-green);
-    color: var(--nss-white);
+    color: var(--nss-gold);
     text-align: center;
-    padding: 2rem 0 1.2rem 0;
 }
 
+/* Site name and tagline */
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -56,20 +57,92 @@ header h1 {
     margin-top: 0.5rem;
 }
 
+/* Green bars for nav framing */
+.green-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--nss-green);
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar section */
+.nav-outer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.nav-bar-bg {
+    width: 100vw;
+    background: var(--nss-grey);
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: var(--nss-grey);
+    box-sizing: border-box;
+}
+
+.nav-bar li {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Nav tabs - no white border between */
+.nav-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    min-width: 110px;
+    padding: 0 2em;
+    background: var(--nss-grey);
+    color: var(--nss-gold);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.11em;
+    border: none;
+    border-radius: 0;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Active/hover states */
+.nav-bar a.active,
+.nav-bar a:focus {
+    background: var(--nss-black);
+    color: var(--nss-gold);
+    outline: none;
+}
+
+.nav-bar a:hover {
+    background: var(--nss-green);
+    color: var(--nss-gold);
+}
+
+/* Accent image border styling */
 .accent-img {
     display: block;
     margin: 32px auto 0 auto;
-    /*  Thick border trick — two-tone */
     border-top: 10px solid var(--nss-green);
     border-left: 10px solid var(--nss-green);
     border-bottom: 10px solid var(--nss-gold);
     border-right: 10px solid var(--nss-gold);
     border-radius: 0px;
     background: #191a1e;
-    /* To blend with main-content */
 }
 
-/* Main */
+/* Main content area */
 main {
     flex: 1;
     padding: 2rem 0;
@@ -111,7 +184,7 @@ main {
     font-weight: 700;
 }
 
-/* Project Cards */
+/* Project cards grid */
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, auto));
@@ -169,7 +242,7 @@ main {
     text-decoration: underline;
 }
 
-/* Footer */
+/* Footer styling */
 footer {
     background: var(--nss-black);
     color: var(--nss-gold);
@@ -180,10 +253,22 @@ footer {
     border-top: 3px solid var(--nss-green);
 }
 
-/* Responsive */
+/* Responsive styles */
 @media (max-width: 900px) {
     .project-cards {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-bar a {
+        min-width: unset;
+        width: 100%;
     }
 }
