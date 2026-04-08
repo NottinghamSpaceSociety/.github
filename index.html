@@ -3,33 +3,89 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- Responsive scaling for all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nottingham Space Society | NSS</title>
+    <title>NSS | Nottingham Space Society</title>
+
+    <!-- Main Site Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Material Symbols: Open-source Google icon font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
 </head>
 
 <body>
+    <!-- 
+    =================
+    PAGE HEADER
+    =================
+    -->
     <header>
         <div class="container">
             <h1>Nottingham Space Society</h1>
             <p class="tagline">It's Nottinghams Rocket Science</p>
         </div>
+
+        <!-- 
+        =============================
+        PRIMARY NAVIGATION BAR
+        ============================= 
+        -->
         <nav class="nav-outer">
+            <!-- Top green line (stylistic element) -->
             <div class="green-bar"></div>
+
+            <!-- Navigation Bar -->
             <div class="nav-bar-bg">
                 <div class="container">
                     <ul class="nav-bar">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about_us.html">About Us</a></li>
-                        <li><a href="committee.html">Committee</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <!--
+                        Each navigation <li> is a tab/button.
+                        For icons, Google's Material Symbols font are used.
+                        The icon name goes INSIDE the <span>.
+                        -->
+                        <li>
+                            <a href="index.html" class="active">
+                                <span class="material-symbols-sharp nav-icon">home</span>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about_us.html">
+                                <span class="material-symbols-sharp nav-icon">info</span>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="committee.html">
+                                <span class="material-symbols-sharp nav-icon">group</span>
+                                Committee
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects.html">
+                                <span class="material-symbols-sharp nav-icon">science</span>
+                                Projects
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
+
+            <!-- Bottom green line (stylistic element) -->
             <div class="green-bar"></div>
         </nav>
     </header>
+
+    <!-- 
+    =================
+    MAIN CONTENT AREA
+    ================= 
+    -->
     <main class="main-content">
+
+        <!-- Intro/Welcome Section -->
         <section class="intro">
             <h2>Welcome to Nottingham Space Society</h2>
             <p>
@@ -37,103 +93,37 @@
                 passion for space exploration, research, and outreach. We foster a collaborative environment for
                 students to develop their skills and prepare them for a career in the space industry.
             </p>
-
-            <img class="accent-img" src="figures/SpaceSocLogo.webp" width="360" height="300">
+            <img class="accent-img" src="figures/SpaceSocLogo.webp" width="360" height="300"
+                alt="Nottingham Space Society Logo">
         </section>
+
+        <!-- Projects Section -->
         <section class="projects">
-            <h2>Our Past Projects</h2>
+            <h2>Highlights</h2>
             <div class="project-cards">
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="card">
-                    <h3>TODO: Add project</h3>
-                    <p>
-                        TODO: Add a description of the project here. This is a placeholder text to illustrate where the
-                        project
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
+                <!-- 
+                These are meant to be quick links for people who are unuware of
+                the society to get directly to the highlights of the NSS.
+                -->
+                <a href="about_us.html">
+                    <div class="card">
+                        <h3>TODO: Add project</h3>
+                        <p>
+                            TODO: Add a description of the project here. This is a placeholder text to illustrate where
+                            the
+                            project info will go.
+                        </p>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
+
+    <!-- 
+    =================
+    SITE FOOTER
+    ================= 
+    -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Nottingham Space Society (NSS). All rights reserved.</p>
